@@ -1,0 +1,305 @@
+.App{
+  margin:0 auto;
+  font-size: 18px;
+  box-shadow: 0px 5px 5px 1px rgba(0,0,0, 0.4);
+}
+
+.nav{
+  display: flex;
+  background: linear-gradient(to left,rgba(222,222,123,0.5),rgba(122,222,111),rgba(121,127,234,.5));
+  padding: 3px;
+  justify-content: space-between;
+} 
+.nav h1{
+  margin-left: 10px;
+color: rgb(235, 7, 102);
+}
+
+.nav-list{
+  display: flex;
+  padding: 7px;
+  flex: .3 1 200px;
+  margin:auto 0;
+  justify-content: space-around;
+  margin-right: 40px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item li a{
+  margin-left: 10px;
+}
+
+.nav-item a{
+  text-decoration: none;
+}
+
+/* halaman profile */
+.section-1{
+  display: flex;
+  padding-bottom: 10px;
+  margin: auto;
+  font-weight: 300;
+  text-align: center;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.section-satu{
+  width: 500px;
+  margin: auto;
+}
+.section-title{
+  font-size:14px;
+  line-height: 29px;
+}
+
+.section-description{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.section-gambar{
+  margin-right: 100px;
+}
+
+ /* halaman my project */
+.section-2{
+  position: relative;
+  margin-bottom: 0;
+}
+.section-2-project{
+  background-color: aqua;
+  margin-top: -40px;
+
+}
+
+.section-2-project h1 ,.section-2-project-judul{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-2-project-gambar{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+    justify-items: center;
+    gap: 50px;
+  align-items: center;
+}
+.section-2-project-gambar .card{
+  width: 300px;
+  background: rgb(232, 233, 186);
+  border-radius: 5px ;
+}
+
+.card-skills {
+  background: white;
+  width: 300px;
+}
+
+.card .deskription ,
+.card-skills .deskription{
+  font-size: 15px;
+  text-align: justify;
+  padding: 20px;
+  text-align: center;
+  font-weight: 100;
+}
+
+.card img ,
+.card-skills img{
+  width: 100%;
+  border-radius: 5px ;
+}
+
+
+/* halaman blog */
+
+/* .article{
+  font-size: 14px;
+}
+
+.article-title  a{
+  font-size: 16px;
+  text-align: justify;
+  text-decoration: none;
+  line-height: 20px;
+  color: black;
+}
+
+.article-title a:hover{
+  color: red;
+}
+
+.article-summary{
+  text-align: justify;
+}
+
+.article-image{
+  width: 100%;
+  height: 200px;;
+} */ 
+
+/* halaman blog detail */
+
+
+
+
+/* media hp mirinh */
+@media screen and (max-width:459px)  and (min-width:315px){
+
+  .App{
+    height: 100vh;
+    font-size: 12px;
+    box-shadow: 0px 5px 5px 10px rgba(0,0,0, 0.4);
+  }
+
+  .nav h1{
+    color: aqua;
+    font-size: 13px;
+  }
+  .App .nav{
+    display: flex;
+  color: rgb(15, 216, 99);
+  }
+
+    .nav-item{
+      display: flex;
+      flex: .5 auto;
+      width:calc(100%/4);
+      justify-content: space-between;
+      
+    }
+
+    .nav-item a{
+      text-decoration: none;
+    }
+
+    /* halaman profile */
+    .section-1{
+      margin: auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .section-gambar{
+      order: 1;
+      margin: 0;
+    }
+
+    .section-title{
+      font-size:14px;
+      order: 2;
+    }
+
+    .section-description{
+      order: 3;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+
+    .section-2-project-gambar{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    .section-2-project-gambar .card {
+      margin-bottom: 20px;
+    }
+   
+    
+    /* halaman blog */
+
+    /* .article{
+      font-size: 14px;
+    }
+
+    .article-title  a{
+      font-size: 16px;
+      text-align: justify;
+      text-decoration: none;
+      line-height: 20px;
+      color: black;
+    }
+
+    .article-title a:hover{
+      color: red;
+    }
+
+    .article-summary{
+      text-align: justify;
+    }
+
+    .article-image{
+      width: 100%;
+      height: 200px;;
+    } */
+}
+
+@media screen and (max-width: 600px) and (min-width:460px){
+   .App{
+    font-size: 12px;
+   }
+
+   .section-1{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+   }
+
+   .section-satu p:nth-child(2){
+    width: 500px;
+    text-align: justify;
+   }
+   .section-description{
+     text-align: justify;
+   }
+
+   .section-gambar{
+    margin:0;
+   }
+
+   .section-2-project-gambar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card-skills{
+    margin-bottom: 20px;
+  }
+
+}
+
+@media screen and (max-width: 900px) and (min-width:601px) {
+  .App{
+   font-size: 12px;
+   height: 100vh;
+  }
+
+  .nav h1{
+    font-size:16px
+  }
+
+  .section-2-project-gambar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-items: center;
+  }
+
+  .section-2-project-gambar .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* media tablet */
