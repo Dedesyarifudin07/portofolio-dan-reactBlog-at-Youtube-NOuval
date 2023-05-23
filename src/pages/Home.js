@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import jokowi from '../img/jokowi.png';
+import Dede from '../img/fotoSaya.png';
 import html from '../img/html.png';
 import css from '../img/css.png';
 import reactjs from '../img/react.png';
@@ -10,6 +10,8 @@ import cisco from '../img/cisco.png';
 import rakitpc from '../img/img/rakitpc.jpeg';
 import mikrotik from '../img/img/imkrotik.jpg';
 import website from '../img/img/dede.png';
+import Rj from '../img/buat_rj.jpg';
+import BelajarMikrotik from '../img/belajar_mikrotik.jpg';
 function Home(){
     useEffect(() => {
         document.title ="Home";
@@ -18,12 +20,25 @@ function Home(){
         <>
         <section className="section-1">
             <div className="section-satu">
-                <p className="section-article">Hello perkenalkan Nama Saya Dede syarifudin</p>
-                <p className="section-article">Saya Seorang Lulusan yang berasal dari Smk Taruna Terpadu 1,Jurusan saya Teknik Komputer  dan Jaringan
-                Tetapi Saya juga Menyukai Programming Walaupun Agak sulit tapi ini menyenangkan dan Membuat saya Bahagia,Dan Saya juga Senang Tentang tkj Dan itu Memamng basic saya</p>
+                <h2 >Hello perkenalkan <br/>Saya <span className="name">Dede syarifudin</span></h2>
+                <div  className="section-article">
+                  <span>Saya Seorang Lulusan yang berasal dari Smk Taruna Terpadu 1,Jurusan saya <b><span className="major">Teknik Komputer  dan Jaringan</span> </b>
+                   Tetapi Saya juga Menyukai Programming Walaupun Agak sulit tapi ini menyenangkan dan Membuat saya Bahagia,Dan Saya juga Senang Tentang tkj Dan itu Memamng basic saya</span>
+                
+                </div>
+                
             </div>
             <div className="section-gambar">
-                <img src={jokowi}  height="300px" width="300px" alt="foto" />
+                <img src={Dede}  height="400px" width="300px" alt="foto" />
+              <span>
+              <svg  className="blob" width="400" height="400" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                <defs><clipPath id="b">
+                  <path fill="currentColor" d="M761 609.5q-42 109.5-151.5 248t-281 62Q157 843 84.5 671.5t41-302Q239 239 369.5 211t266.5-5.5Q772 228 787.5 364T761 609.5Z"/></clipPath><filter id="a" x="-50vw" y="-50vh" width="100vw" height="100vh"><feFlood flood-color="#fff" result="neutral-gray"/>
+                  <feTurbulence type="fractalNoise" baseFrequency="2.5" numOctaves="100" stitchTiles="stitch" result="noise"/><feColorMatrix in="noise" type="saturate" values="0" result="destaturatedNoise"/><feComponentTransfer in="desaturatedNoise" result="theNoise"><feFuncA type="table" tableValues="0 0 0.15 0"/>
+                  </feComponentTransfer><feBlend in="SourceGraphic" in2="theNoise" mode="soft-light" result="noisy-image"/></filter></defs><g filter="url(#a)" clip-path="url(#b)"><path fill="#26cf31" d="M761 609.5q-42 109.5-151.5 248t-281 62Q157 843 84.5 671.5t41-302Q239 239 369.5 211t266.5-5.5Q772 228 787.5 364T761 609.5Z"/></g></svg>
+              </span>
+
+                
             </div>
         </section>
         {/* project */}
@@ -39,22 +54,30 @@ function Home(){
                                 <p> Merakit satu persatu bagian komputer,sampai instalasi os,misalkan os ubuntu,windows,dll</p>                   
                             </div>
                        </div>
-                       <div className="card"> 
-                            <img src={mikrotik} alt="mikrotik" height="179px"></img>
-                            <div className="deskription">
-                                <h5>mensetting mikrotik</h5>
-                                <p>mensetting konfigurasi mikrotik sesuai keinginan klien,
-                                    misalkan membuat user dan password baru,meblokir situs website agar tidak bisa di akses ketika
-                                    ber internet,misalkan youtube,mengatur limit bandwith,dll.
-                                </p>
-                            </div>
-                       </div>
                        <div className="card">
                          <img src={website} alt="build-website" height="179px"></img>
                             <div className="deskription">
                                 <h5> membuat website </h5>
                                 <p>membuat website seperti landing page,blog post,menggunakan html css , react js</p>
 
+                            </div>
+                       </div>
+                       <div className="card">
+                         <img src={Rj} alt="build-website" height="179px"></img>
+                            <div className="deskription">
+                            <h5> Membuat Kabel Lan </h5>
+                                <p>Membuat Kabel lan dengan type sraight</p>
+
+                            </div>
+                       </div>
+                       <div className="card">
+                         <img src={BelajarMikrotik} alt="build-website" height="179px"></img>
+                            <div className="deskription">
+                            <h5>mensetting mikrotik</h5>
+                                <p>mensetting konfigurasi jaringan dengan mikrotik sesuai keinginan klien,
+                                    misalkan membuat login page,meblokir situs website agar tidak bisa di akses ketika
+                                    tersambung internet,misalkan youtube,mengatur limit bandwith,dll.
+                                </p>
                             </div>
                        </div>
                        
@@ -87,10 +110,17 @@ function Home(){
                        <div className="card-skills">
                          <img src={cisco} alt="build-website" height="179px"></img>
                        </div>
+                       <div className="card-skills">
+                         <img src={mikrotik} alt="build-website" height="179px"></img>
+                       </div>
                 </div>
              </div>
         </section>
         </section>
+        <div className="footer ">
+                  <span> @Created BY@DedeSyarifudin.2023</span>
+        </div>
+        
 
 
         

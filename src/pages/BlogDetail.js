@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const BlogDetail= () => {
+  // const context = useAppContext();
+  // console.log(context.articles)
   const params = useParams();
   const [articles,setArticles] = useState({});
   const [loading,setLoading] = useState(true);
@@ -16,7 +18,6 @@ const BlogDetail= () => {
 
       const response = await request.json();
       document.title = response.title;
-      console.log(response)
       setArticles(response);
       setLoading(false)
     }
@@ -31,6 +32,7 @@ const BlogDetail= () => {
   }
   return(
     <>
+    <section className="section">
      {/* jika loading false maka tampilkan data datanya */}
      {loading ? (
       <div>
@@ -38,15 +40,17 @@ const BlogDetail= () => {
       </div>
      ):(
       <articles classname="article" >
-        <h2 className="article-title"> {articles.title}</h2>
-        <img src={articles.imageUrl} alt={articles.title} className="article-image"/>
-        <p className="article-url"> sumber: <a href={articles.url} target="_blank" rel="noreferrer">{articles.newsSite}</a></p>
-        <h3 className="article-summary">{articles.summary}</h3>
+        <h2 className="articleTitle"> {articles.title}</h2>
+        <img src={articles.imageUrl} alt={articles.title} className="articleImage"/>
+        <p className="articleUrl"> sumber: <a href={articles.url} target="_blank" rel="noreferrer">{articles.newsSite}</a></p>
+        <h3 className="articleSummary">{articles.summary}</h3>
         <time>Published at :{new Date(articles.publishedAt).toLocaleDateString()}</time>
         
       </articles>
 
      )}
+
+    </section>
     </>
   )
 }

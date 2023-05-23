@@ -2,6 +2,7 @@
   margin:0 auto;
   font-size: 18px;
   box-shadow: 0px 5px 5px 1px rgba(0,0,0, 0.4);
+  box-sizing: border-box;
 }
 
 .nav{
@@ -20,8 +21,8 @@ color: rgb(235, 7, 102);
   padding: 7px;
   flex: .3 1 200px;
   margin:auto 0;
-  justify-content: space-around;
-  margin-right: 40px;
+  justify-content: space-evenly;
+  margin-right: 20px;
 }
 
 .nav-item {
@@ -40,31 +41,50 @@ color: rgb(235, 7, 102);
 /* halaman profile */
 .section-1{
   display: flex;
-  padding-bottom: 10px;
-  margin: auto;
+  gap: 60px;
   font-weight: 300;
   text-align: center;
-  justify-content: space-around;
-  background-color: white;
+  justify-content: space-evenly;
 }
 
 .section-satu{
+  margin: auto 0;
   width: 500px;
-  margin: auto;
-}
-.section-title{
-  font-size:14px;
-  line-height: 29px;
 }
 
-.section-description{
-    font-size: 14px;
-    text-align: justify;
+.section-satu .name{
+  color:#26cf31 ;
+}
+
+.section-article{
+  line-height: 27px;
+  text-align: justify;
+  color: grey;
+  font-weight: 700;
+  font-family:  Georgia, Times, 'Times New Roman', serif;
+}
+
+.section-article .major{
+  color :green
 }
 
 .section-gambar{
-  margin-right: 100px;
+  margin-top: 30px;
+
 }
+.section-gambar img{
+  z-index: 9999;
+}
+.section-gambar span .blob{
+  position:absolute;
+  right: 90px;
+z-index: -10;
+scale: 1.4;
+}
+
+
+
+
 
  /* halaman my project */
 .section-2{
@@ -86,7 +106,7 @@ color: rgb(235, 7, 102);
   justify-content: space-evenly;
   flex-wrap: wrap;
     justify-items: center;
-    gap: 50px;
+    gap: 60px;
   align-items: center;
 }
 .section-2-project-gambar .card{
@@ -117,31 +137,61 @@ color: rgb(235, 7, 102);
 
 
 /* halaman blog */
+.section{
+  text-align: center;
+  width: 768px;
+  margin: 0 auto;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0, 0.4);
+}
 
-/* .article{
+.section .articleDeskription{
+  font-size:16px;
+}
+.article{
   font-size: 14px;
 }
 
-.article-title  a{
+.articleTitle  a{
   font-size: 16px;
   text-align: justify;
   text-decoration: none;
-  line-height: 20px;
+  line-height: 16px;
   color: black;
 }
 
-.article-title a:hover{
+.articleTitle a:hover{
   color: red;
 }
 
-.article-summary{
+.articleSummary{
   text-align: justify;
+  padding:0 7px 0 7px;
 }
 
-.article-image{
-  width: 100%;
-  height: 200px;;
-} */ 
+.articleUrl a:hover{
+  color: greenyellow;
+}
+
+.articleImage{
+  width: 750px;
+  height: 400px;
+} 
+
+/* halaman footer */
+.footer{
+  background-color: black;
+  color: white;
+  height: 55px;
+  margin-bottom: 0;
+  line-height: 55px;
+
+}
+
+.footer span{
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
 
 /* halaman blog detail */
 
@@ -152,13 +202,12 @@ color: rgb(235, 7, 102);
 @media screen and (max-width:459px)  and (min-width:315px){
 
   .App{
-    height: 100vh;
     font-size: 12px;
     box-shadow: 0px 5px 5px 10px rgba(0,0,0, 0.4);
+    box-sizing: border-box;
   }
 
   .nav h1{
-    color: aqua;
     font-size: 13px;
   }
   .App .nav{
@@ -183,12 +232,25 @@ color: rgb(235, 7, 102);
       margin: auto;
       text-align: center;
       display: flex;
-      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      gap: 0;
     }
 
     .section-gambar{
       order: 1;
       margin: 0;
+    }
+
+    .section-gambar span .blob{
+      width: 300px;
+     right: -1px;
+     position: absolute;
+     scale: 1.5;
+    }
+
+
+    .section-article{
+      padding: 0 40px;
     }
 
     .section-title{
@@ -241,18 +303,52 @@ color: rgb(235, 7, 102);
       width: 100%;
       height: 200px;;
     } */
+
+    /* halaman blog */
+    .section{
+      width: 300px;
+      text-align: center;
+      margin: 0 auto;
+      box-shadow: 0 4px 4px 0 rgba(0,0,0, 0.4);
+    }
+  
+    .articleImage{
+      width: 295px;
+      height: 200px;
+    } 
+
+    .section .articleDeskription{
+      font-size:13px;
+    }
+
+    .articleTitle a {
+      padding: 0 7px 7px 7px;
+    }
 }
 
 @media screen and (max-width: 600px) and (min-width:460px){
    .App{
     font-size: 12px;
+    box-sizing: border-box;
    }
-
+   /* halaman profile */
    .section-1{
     display: flex;
-    flex-direction: column-reverse;
-    height: 100vh;
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 0;
    }
+
+   .section-article{
+    padding: 0 40px;
+   }
+   .section-gambar span .blob{
+    position:absolute;
+  z-index: -10;
+  right:12px;
+  scale: 1.1;
+  }
 
    .section-satu p:nth-child(2){
     width: 500px;
@@ -276,13 +372,31 @@ color: rgb(235, 7, 102);
   .card-skills{
     margin-bottom: 20px;
   }
+  /* halaman blog */
+  .section{
+    text-align: center;
+    width: 415px;
+    margin: 0 auto;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0, 0.4);
+  }
+
+  .articleImage{
+    width: 400px;
+    height: 200px;
+  } 
+  .section .articleDeskription{
+    font-size:14px;
+  }
+
+  .articleTitle,.articleTitle a {
+    font-size: 14px;
+  }
 
 }
 
 @media screen and (max-width: 900px) and (min-width:601px) {
   .App{
-   font-size: 12px;
-   height: 100vh;
+   font-size: 16px;
   }
 
   .nav h1{
@@ -300,6 +414,65 @@ color: rgb(235, 7, 102);
   .section-2-project-gambar .card {
     margin-bottom: 20px;
   }
+  .section .articleDeskription{
+    font-size:15px;
+  }
+  /* halaman blog */
+  .section{
+    text-align: center;
+    width: 550px;
+    margin: 0 auto;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0, 0.4);
+  }
+  
+  .articleImage{
+    width: 540px;
+    height: 400px;
+  } 
+
+  .articleTitle a{
+    padding: 0 7px 7px 0;
+  }
+
+  /* halaman profile */
+  /* halaman profile */
+   .section-1{
+    display: flex;
+    /* flex-direction: column-reverse; */
+    justify-content: space-around;
+    margin-top: 10px;
+    gap: 0;
+   }
+
+   .section-article{
+    padding: 0 40px;
+   }
+   .section-gambar span .blob{
+    position:absolute;
+  z-index: -10;
+  right:-70px;
+  scale: 1.1;
+  }
 }
 
-/* media tablet */
+
+/* media tablet 1250 - 901*/
+@media screen and (max-width: 1250px) and (min-width:901px) {
+  .section-1{
+    display: flex;
+    /* flex-direction: column-reverse; */
+    justify-content: space-around;
+    margin-top: 10px;
+    gap: 0;
+   }
+
+   .section-article{
+    padding: 0 40px;
+   }
+   .section-gambar span .blob{
+    position:absolute;
+  z-index: -10;
+  right:-50px;
+  scale: 1.1;
+  }
+}
